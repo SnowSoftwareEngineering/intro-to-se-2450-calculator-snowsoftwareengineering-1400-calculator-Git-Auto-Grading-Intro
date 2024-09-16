@@ -28,7 +28,7 @@ jobs:
       with:
         test-name: Test Subtraction
         setup-command: dotnet restore && dotnet build
-        command: dotnet test --filter FullyQualifiedName~HiddenTest.UnitTest1.TestSubtraction
+        command: dotnet test --filter "FullyQualifiedName~Setup.Jarvis.TestSubtraction"
         timeout: 3
         max-score: 3
     - name: Test Multiplication
@@ -37,7 +37,7 @@ jobs:
       with:
         test-name: Test Multiplication
         setup-command: dotnet restore && dotnet build
-        command: dotnet test --filter FullyQualifiedName~HiddenTest.UnitTest1.TestMultiplication
+        command: dotnet test --filter "FullyQualifiedName~Setup.Jarvis.TestMultiplication"
         timeout: 3
         max-score: 3
     - name: Test Division
@@ -46,7 +46,7 @@ jobs:
       with:
         test-name: Test Division
         setup-command: dotnet restore && dotnet build
-        command: dotnet test --filter FullyQualifiedName~HiddenTest.UnitTest1.TestDivision
+        command: dotnet test --filter "FullyQualifiedName~Setup.Jarvis.TestDivision"
         timeout: 3
         max-score: 3
     - name: Autograding Reporter
